@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+/* References:  https://cssgradient.io/gradient-backgrounds/
+https://fontawesome.com/icons/magnifying-glass?s=solid */
+
+*{
+    box-sizing: border-box;
+}
+/* Body Content on HTML */
+body{ 
+    background: #a8ff78;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: "Poppins",sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.mobile-container{
+    background-color: white;
+    width: 400px;
+    box-shadow: 0 0 10px 2px #3333331a;
+    border-radius:3px;
+    overflow: hidden;
+    width: 400px;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* Header Content */
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+header input{
+    background-color:#eee;
+    border:none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+}
+
+header button{
+    border: none;
+    background-color: transparent;
+    color: rgb(138, 129, 141);
+    font-size: 1.4rem;
+    margin-left: 10px;
+    
+}
+
+/* Favourite Meals */
+.fav-container{
+    padding: 0.25rem 1rem;
+    text-align: center;
+    background-color: rgb(239, 243, 247);
+    box-shadow: 0 0 10px 1px #3333331a;
+}
+
+.fav-meals{
+    display: flex;
+    list-style-type: none;
+    padding: 0;  
+    /* flex-wrap: wrap;
+    justify-content: center;   */
+}
+
+.fav-meals li{
+    /* margin: 5px; */
+    position: relative;
+    width: 85%;
+    cursor: pointer;
+}
+
+.fav-meals li .clear{
+   background-color: transparent;
+   border: none;
+   position: absolute;
+   top: -0.5;
+   right: -0.5rem;
+   font-size: 1.2rem;
+   cursor: pointer;
+}
+
+.fav-meals li:hover .clear{
+   opacity: 1;
+}
+
+.fav-meals li img{
+   /* border-radius: 100%;
+   object-fit: cover;
+   /* width: 100%;
+   height: 100%; */ 
+
+   border: 2px solid #ffffff;
+   border-radius: 50%;
+   box-shadow: 0 0 10px 2px #3333331a;
+   object-fit: cover;
+   height: 70px;
+   width: 70px;
+}
+
+.fav-meals li span {
+    display: inline-block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75px;
+}
+
+/* Meal Structure */
+.meal {
+      margin: 1rem; /*image is move a 10px from div */
+      box-shadow: 0 0 10px 2px #3333331a;
+      border-radius: 10px;
+      overflow: hidden; /*  ? */
+
+}
+
+.meal-header {
+       position: relative; /*By this header would be relative - check to remove that postion      */
+       
+    }
+/* Random Recipe --- By this we can move the heading tag in the img like position in img */
+.meal-header .random{
+    position: absolute;
+    top: 1rem;
+    background-color:orangered;  
+    padding: 0.25rem 0.5rem;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;           
+}
+
+.meal-header img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.meal-body {
+      display: flex;
+      justify-content: space-between; /*Can move the one to left and other right like space between */
+      align-items: center;
+      padding: 1rem;  
+}
+
+.meal-body h4{
+    margin: 0;
+}
+
+.meal-body .fav-btn{
+    border: none;
+    background-color: transparent;
+    font-size: 1.3rem;
+    color: rgb(197, 188, 188);
+    cursor:pointer;
+}
+
+.meal-body .fav-btn.active{
+    color: rebeccapurple;
+}
+
+/* Pop-Up Source Code */
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.popup-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 2rem;
+    position: relative;
+    overflow: auto;
+    max-height: 100vh;
+    max-width: 600px;
+    width: 100%;
+}
+
+.popup .close-popup {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.meal-info h1 {
+    text-align: center;
+}

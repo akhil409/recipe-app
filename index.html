@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+     <div class="mobile-container" >
+<!-- Header Content-->
+         <header>
+            <input type="text"  id="search-term">
+            <button id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+         </header>
+         
+<!-- Favourite Meals -->
+         <div class="fav-container" >
+             <h2>Favourite Meals</h2>
+             <ul class="fav-meals" id="fav-meals">
+                 <!-- <li><img src="https:\/\/www.themealdb.com\/images\/media\/meals\/uvuyxu1503067369.jpg" alt="">
+                    <span>Spring Rolls</span></li>
+                 <li><img src="https:\/\/www.themealdb.com\/images\/media\/meals\/xqqqtu1511637379.jpg" alt="">
+                    <span>Ice-Cream</span></li>
+                 <li><img src="https:\/\/www.themealdb.com\/images\/media\/meals\/wvpsxx1468256321.jpg" alt="">
+                    <span>Fried Rice</span></li>
+                <li><img src="https:\/\/www.themealdb.com\/images\/media\/meals\/1550441882.jpg" alt="">
+                    <span>Potato Chips</span></li> -->
+             </ul>
+         </div>
+
+<!-- Meal Structure -->
+        <div class="meals" id="meals"></div>  
+            <!-- <div class="meal"> 
+                <div class="meal-header">
+                    <span class="random">Random Recipe</span>
+                    <img src="https:\/\/www.themealdb.com\/images\/media\/meals\/rvtvuw1511190488.jpg" alt="" srcset="">
+                </div>
+                <div class="meal-body">
+                    <h4>Veggies</h4>
+                    <button class="fav-btn active">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+            </div> -->
+     </div>
+
+<!-- Pop-Up source Code -->
+     <div class="popup-container hidden" id="meal-popup">
+        <div class="popup">
+            <button id="close-popup" class="close-popup">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="meal-info" id="meal-info"></div>
+        </div>
+    </div>
+     
+</body>
+<script src="script.js" defer></script>
+</html>
+
+<!-- Reference: for heart symbole button https://cdnjs.com/libraries/font-awesome 
+    Button Search - https://fontawesome.com/icons/magnifying-glass?s=solid-->
